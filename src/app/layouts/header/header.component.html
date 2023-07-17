@@ -1,0 +1,14 @@
+<header class="navbar navbar-expand-lg fixed-top bg-white">
+  <div class="container justify-content-center">
+    <a routerLink="/dashboard" class="site-logo">ANG-BLOG</a>
+  </div>
+  <div class="container justify-content-center" *ngIf="loginStatus$ | async">
+    <a href="#" class="ms-3">{{ userEmail }}</a>
+    <button
+      class="btn btn-sm btn-info bg-secondary-theme text-theme-primary"
+      (click)="logout()"
+    >
+      Logout
+    </button>
+  </div>
+</header>
